@@ -1,0 +1,201 @@
+@use "sass:list";
+
+$bottom-values: 10%, 11%, 14%, 24%, 34%, 36%, 49%, 54%, 57%;
+$dot-colors: #0bd7be, #0bd7be, #895af6, #895af6, #ff08e5, #fd38b0, #fd38b0,
+  #e15761, #e15761;
+
+.section6 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("images/sec06-bg.png");
+  background-size: cover;
+  .section_title_wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 6em 0 0 10em;
+    h2 {
+      line-height: 130%;
+      margin-bottom: 30px;
+      font-size: 70px;
+      font-weight: 700;
+    }
+    h3 {
+      line-height: 160%;
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .icon_art {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: $color-bg-secondary;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .line_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .svg_line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
+  .history_data_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    .history_data_mo_bg {
+      display: none;
+    }
+    .history_data_list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      .history_data_item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 1px;
+          height: 100%;
+          background-color: #ffffff0d;
+          transform: translateX(-50%);
+        }
+        .connection_line {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+        .data_item_wrap {
+          position: absolute;
+          right: -50%;
+          width: 100%;
+          z-index: 2;
+        }
+        @for $i from 1 through list.length($bottom-values) {
+          &:nth-child(#{$i}) .data_item_wrap {
+            bottom: list.nth($bottom-values, $i);
+          }
+        }
+        .data_text {
+          text-align: center;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: -0.5px;
+          span {
+            display: block;
+            color: $color-text-primary;
+            &:last-of-type {
+              margin-top: 10px;
+              color: #ffffff80;
+            }
+          }
+        }
+        .dot {
+          width: 16px;
+          height: 16px;
+          margin: 52px auto 0;
+          border-radius: 50%;
+        }
+        @for $i from 1 through list.length($dot-colors) {
+          &:nth-child(#{$i}) .dot {
+            background-color: list.nth($dot-colors, $i);
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .section_title_wrap {
+      position: relative;
+      margin-bottom: 53px;
+      padding: 80px 0 0 44px;
+      h2 {
+        font-size: 32px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      .icon_art {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .line_wrap {
+      display: none;
+    }
+    .history_data_container {
+      position: relative;
+      height: auto;
+      .history_data_mo_bg {
+        position: absolute;
+        left: 47px;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("images/sec06-mo-bg.png");
+        background-repeat: no-repeat;
+      }
+      .history_data_list {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 30px;
+        margin-left: 44px;
+        .history_data_item {
+          &::after {
+            display: none;
+          }
+          .data_item_wrap {
+            position: relative;
+            left: 0;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 16px;
+            .data_text {
+              text-align: left;
+              font-size: 16px;
+              span:first-of-type {
+                margin-right: 5px;
+              }
+              span:not(:last-of-type) {
+                display: inline-block;
+              }
+            }
+            .dot {
+              width: 8px;
+              height: 8px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

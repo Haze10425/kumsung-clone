@@ -1,0 +1,10 @@
+.sideImageSlider {
+  width: 240px;
+  height: 100vh;
+  overflow: hidden;
+  .slide_image {
+    display: block;
+    width: 240px;
+    height: auto;
+  }
+}

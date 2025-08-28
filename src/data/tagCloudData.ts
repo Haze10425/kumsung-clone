@@ -1,0 +1,17 @@
+export const tagCloudLabels = [
+  "사회",
+  "체육",
+  "사회와 문화",
+  "정보",
+  "실과",
+  "음악",
+  "인공지능 기초",
+  "기술·가정",
+  "미술",
+  " ",
+  "Society",
+  "Athletic",
+  " ",
+  "Art",
+  "MUSIC",
+];

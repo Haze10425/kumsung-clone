@@ -1,0 +1,105 @@
+$icon-paths: (
+  1: "society2",
+  2: "pe",
+  3: "society3",
+  4: "info",
+  5: "practical",
+  6: "music2",
+  7: "ai",
+  8: "tech",
+  9: "painting",
+  10: "logo",
+  11: "society",
+  12: "athletic",
+  13: "logo2",
+  14: "art",
+  15: "music",
+);
+
+.section2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+  .tagCloudContainer {
+    display: flex;
+
+    .tagCloud_item {
+      display: flex;
+      align-items: center;
+      color: white !important;
+      font-size: 28px;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        margin-right: 5px;
+        background-image: url("images/ico-tagcloud-ai.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      @each $index, $icon in $icon-paths {
+        &:nth-child(#{$index})::before {
+          background-image: url("/images/icons/ico-tagcloud-#{$icon}.png");
+        }
+      }
+
+      &:nth-child(10)::before {
+        width: 98px;
+        height: 13px;
+        margin-right: 0;
+      }
+      &:nth-child(13)::before {
+        width: 180px;
+        height: 24px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .subtitle_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 90px 70px #000;
+    background-color: #000;
+    z-index: 20;
+    
+    .logo_icon {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      font-size: 40px;
+      transition: ease-in;
+    }
+  }
+
+  @include mobile {
+    .subtitle_container {
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+  @include laptop {
+  }
+
+  @include desktop {
+    .subtitle_container {
+      h3 {
+        font-size: 70px;
+      }
+    }
+  }
+}

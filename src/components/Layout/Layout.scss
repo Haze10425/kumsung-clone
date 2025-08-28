@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex: 1;
+  }
+
+  @include mobile {
+    main {
+      touch-action: pan-y;
+    }
+  }
+
+  @include desktop {
+    main {
+      padding-top: 120px;
+      border: 1px solid blue;
+    }
+  }
+}

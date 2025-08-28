@@ -1,0 +1,127 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  min-height: 386px;
+  padding-top: 50px;
+  color: #b3b3b3;
+  background-color: $color-bg-primary;
+  overflow: hidden;
+  .footer_menu_wrap {
+    .footer_menu {
+      display: flex;
+      gap: 32px;
+      padding-bottom: 60px;
+    }
+    .address_wrap {
+      .logo {
+        display: inline-block;
+        padding-bottom: 18px;
+      }
+      address {
+        line-height: 160%;
+        padding-bottom: 25px;
+        color: #777;
+        font-style: normal;
+        span {
+          position: relative;
+          display: inline-block;
+          margin-right: 16px;
+          &:not(:last-of-type)::after {
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: -8px;
+            width: 1px;
+            height: 13px;
+            background-color: #777;
+          }
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .sns_menu {
+        display: flex;
+        gap: 9px;
+        .link_sns {
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .family_site_wrap {
+    min-width: 292px;
+    font-weight: 700;
+    h6 {
+      padding-bottom: 24px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .family_site {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 78px;
+      font-size: 15px;
+      a {
+        position: relative;
+        .icon_link {
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          width: 15px;
+          height: 15px;
+          margin-left: 5px;
+          background-image: url("images/icons/ico-external-link.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 36px 32px 52px;
+    .footer_menu_wrap {
+      .footer_menu {
+        display: none;
+      }
+      .address_wrap {
+        font-size: 12px;
+        address {
+          span {
+            &:nth-of-type(2)::after {
+              display: none;
+            }
+            &:last-of-type {
+              display: block;
+            }
+          }
+          p {
+            font-size: 12px;
+          }
+          .link_privacy {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .family_site_wrap {
+      padding-bottom: 42px;
+      font-size: 14px;
+    }
+  }
+
+  @include laptop {
+    .address_wrap {
+      address {
+        .link_privacy {
+          display: none;
+        }
+      }
+    }
+  }
+}

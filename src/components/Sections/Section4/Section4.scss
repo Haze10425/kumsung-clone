@@ -1,0 +1,172 @@
+.section4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  .keyword {
+    display: block;
+    padding-bottom: 30px;
+    color: #895af6;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .section_title {
+    font-size: 40px;
+    line-height: 130%;
+    padding-bottom: 30px;
+    text-align: center;
+    span {
+      display: inline-block;
+      &:nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+  .btn_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .btn_rounded {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: $color-bg-secondary;
+    }
+    .btn_dark {
+      cursor: not-allowed;
+      pointer-events: none;
+      background-color: #fff9;
+    }
+    .btn_rounded::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+    .icon_dislike_dark::after {
+      background-image: url("images/icons/ico-dislike-dark.png");
+    }
+    .icon_like_hover::after {
+      background-image: url("images/icons/ico-like-hover.png");
+    }
+  }
+  .textbook_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding-top: 60px;
+    .textbook {
+      position: relative;
+      flex: 1 1 0;
+      max-width: 333px;
+      z-index: 0;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      .textbook_link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 52px;
+        padding-top: 24px;
+        z-index: 1;
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-size: 100% 100%;
+          background-repeat: no-repeat 50%;
+          transition: background-image 0.3s ease;
+        }
+        &.elementary::after {
+          background-image: url("images/textbooks/textbook-bg-elementary.png");
+        }
+        &.middle::after {
+          background-image: url("images/textbooks/textbook-bg-middle.png");
+        }
+        &.high::after {
+          background-image: url("images/textbooks/textbook-bg-high.png");
+        }
+        &:hover.elementary::after {
+          background-image: url("images/textbooks/textbook-bg-elementary-hover.png");
+        }
+        &:hover.middle::after {
+          background-image: url("images/textbooks/textbook-bg-middle-hover.png");
+        }
+        &:hover.high::after {
+          background-image: url("images/textbooks/textbook-bg-high-hover.png");
+        }
+        .grade {
+          position: relative;
+          padding-bottom: 8px;
+          font-size: 20px;
+          font-weight: 700;
+          .dot {
+            display: inline-block;
+            padding-left: 3px;
+          }
+        }
+        .desc {
+          padding-bottom: 35px;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        .textbook_img {
+          max-width: 176px;
+          height: 232px;
+        }
+        .elementary {
+          color: #ffba1a;
+        }
+        .middle {
+          color: #0bd7be;
+        }
+        .high {
+          color: #4a82ee;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .keyword {
+      padding-bottom: 8px;
+      font-size: 16px;
+    }
+    .section_title {
+      font-size: 32px;
+      span {
+        display: block;
+      }
+    }
+    .btn_wrap {
+      .btn_rounded {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .textbook_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    .section_title {
+      font-size: 70px;
+    }
+  }
+}

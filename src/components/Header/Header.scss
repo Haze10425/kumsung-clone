@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: $color-bg-primary;
+  transition: opacity 0.3s;
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      ul {
+        display: flex;
+        li {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+    }
+    .moblie_nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn_nav {
+        width: 32px;
+        height: 32px;
+        background-image: url("/images/icons/ico-menu-white.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .lnb_wrap_moblie {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    .header_container {
+      padding: 0 25px;
+      nav {
+        display: none;
+      }
+      .mobile_nav {
+        position: relative;
+      }
+      .lnb_wrap_moblie {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: calc(100% - 30px);
+        height: 100vh;
+        padding: 0 25px;
+        color: $color-text-secondary;
+        background-color: $color-bg-secondary;
+        .lnb_header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 58px;
+          .btn_close {
+            width: 30px;
+            height: 30px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .lnb_list {
+          padding-top: 24px;
+          .lnb_item {
+            padding: 22px 0;
+            color: #121212;
+            font-weight: 600;
+            &:not(:last-of-type) {
+              border-bottom: 1px solid #ebebeb;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include laptop {
+    .header_container {
+      padding: 0 2vw;
+      .moblie_nav {
+        display: none;
+      }
+      nav {
+        ul {
+          li {
+            &:not(:last-of-type) {
+              margin-right: 1vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .header_container {
+      height: 120px;
+      padding: 0 10vw;
+      nav {
+        ul {
+          li {
+            &:not(:last-of-type) {
+              margin-right: 4vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include large-desktop {
+    .header_container {
+      padding: 0 13vw;
+      nav {
+        ul {
+          li {
+            &:not(:last-of-type) {
+              margin-right: 5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
