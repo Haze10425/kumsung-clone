@@ -43,7 +43,7 @@ const Header = ({ className = "" }: HeaderProps) => {
             <div className="lnb_header">
               <Logo color="#121212" width="98px" />
               <button className="btn_close" onClick={handleToggle}>
-                <img src="/images/icons/ico-close.png" alt="닫기" />
+                <img src="./images/icons/ico-close.png" alt="닫기" />
               </button>
             </div>
             <ul className="lnb_list">

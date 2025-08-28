@@ -65,7 +65,7 @@ const Section3 = () => {
           <button className="btn_rounded icon_like" onClick={handleBubble}>
             <div className={`bubble_wrap ${showBubble ? "active" : ""}`}>
               <span className="text">선생님 최고예요!</span>
-              <img src="/images/bubble-green.png" alt="선생님 최고예요!"></img>
+              <img src="./images/bubble-green.png" alt="선생님 최고예요!"></img>
             </div>
             <span className="blind">like</span>
           </button>

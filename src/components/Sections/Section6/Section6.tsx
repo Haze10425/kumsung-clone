@@ -59,7 +59,7 @@ const Section6 = () => {
         </h2>
         <h3>드디어 예술과 기술의 융합 완성</h3>
         <div className="icon_art">
-          <img src="/images/icons/ico-art.png" />
+          <img src="./images/icons/ico-art.png" />
         </div>
       </div>
 

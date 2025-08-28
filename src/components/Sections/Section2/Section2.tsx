@@ -29,7 +29,7 @@ const Section2 = () => {
         {tagCloudLabels}
       </TagCloud>
       <div className="subtitle_container">
-        <img src="/images/sec02-logo.png" className="logo_icon" />
+        <img src="./images/sec02-logo.png" className="logo_icon" />
         <h3>
           누적 발행 부수 <br />
           1억 6,340만부

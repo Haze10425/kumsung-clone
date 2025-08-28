@@ -19,12 +19,12 @@ const Section5 = () => {
           <br className="only_m" /> 지금 바로 만나 보세요!
         </p>
         <div className="img_wrap">
-          <img src="/images/sec05-phones.png" className="only_pc" />
-          <img src="/images/m-sec05-phones.png" className="only_m" />
+          <img src="./images/sec05-phones.png" className="only_pc" />
+          <img src="./images/m-sec05-phones.png" className="only_m" />
         </div>
 
         <a href="#!" className="link_area">
-          <img src="/images/arthub_symbol.png" className="arthub_symbol" />
+          <img src="./images/arthub_symbol.png" className="arthub_symbol" />
           금성 아트허브
         </a>
       </div>

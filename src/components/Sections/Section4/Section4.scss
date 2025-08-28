@@ -52,10 +52,10 @@
       transform: translate(-50%, -50%);
     }
     .icon_dislike_dark::after {
-      background-image: url("images/icons/ico-dislike-dark.png");
+      background-image: url("#{$base-url}/images/icons/ico-dislike-dark.png");
     }
     .icon_like_hover::after {
-      background-image: url("images/icons/ico-like-hover.png");
+      background-image: url("#{$base-url}/images/icons/ico-like-hover.png");
     }
   }
   .textbook_container {
@@ -91,22 +91,22 @@
           transition: background-image 0.3s ease;
         }
         &.elementary::after {
-          background-image: url("images/textbooks/textbook-bg-elementary.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-elementary.png");
         }
         &.middle::after {
-          background-image: url("images/textbooks/textbook-bg-middle.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-middle.png");
         }
         &.high::after {
-          background-image: url("images/textbooks/textbook-bg-high.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-high.png");
         }
         &:hover.elementary::after {
-          background-image: url("images/textbooks/textbook-bg-elementary-hover.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-elementary-hover.png");
         }
         &:hover.middle::after {
-          background-image: url("images/textbooks/textbook-bg-middle-hover.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-middle-hover.png");
         }
         &:hover.high::after {
-          background-image: url("images/textbooks/textbook-bg-high-hover.png");
+          background-image: url("#{$base-url}/images/textbooks/textbook-bg-high-hover.png");
         }
         .grade {
           position: relative;

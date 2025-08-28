@@ -40,14 +40,14 @@ $icon-paths: (
         width: 38px;
         height: 38px;
         margin-right: 5px;
-        background-image: url("images/ico-tagcloud-ai.png");
+        background-image: url("#{$base-url}/images/ico-tagcloud-ai.png");
         background-repeat: no-repeat;
         background-size: contain;
       }
 
       @each $index, $icon in $icon-paths {
         &:nth-child(#{$index})::before {
-          background-image: url("/images/icons/ico-tagcloud-#{$icon}.png");
+          background-image: url("#{$base-url}/images/icons/ico-tagcloud-#{$icon}.png");
         }
       }
 

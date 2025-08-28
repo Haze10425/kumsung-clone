@@ -10,7 +10,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background-image: url("images/section03-img.png");
+    background-image: url("#{$base-url}/images/section03-img.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,11 +56,11 @@
         background-repeat: no-repeat;
       }
       .icon_dislike::after {
-        background-image: url("images/icons/ico-dislike.png");
+        background-image: url("#{$base-url}/images/icons/ico-dislike.png");
       }
       .icon_like {
         &::after {
-          background-image: url("images/icons/ico-like.png");
+          background-image: url("#{$base-url}/images/icons/ico-like.png");
         }
         .bubble_wrap {
           position: absolute;
@@ -82,7 +82,7 @@
             width: 105px;
             height: 95px;
             z-index: 3;
-            background-image: url("/images/hearts.png");
+            background-image: url("#{$base-url}/images/hearts.png");
             background-size: cover;
             background-repeat: no-repeat;
           }
@@ -113,7 +113,7 @@
       right: 0;
       width: 208px;
       height: 336px;
-      background-image: url("images/section03-img2-mob.png");
+      background-image: url("#{$base-url}/images/section03-img2-mob.png");
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -124,7 +124,7 @@
       left: 0;
       width: 581px;
       height: 448px;
-      background-image: url("images/section03-img-mob.png");
+      background-image: url("#{$base-url}/images/section03-img-mob.png");
       background-size: cover;
       background-repeat: no-repeat;
     }

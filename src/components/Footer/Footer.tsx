@@ -48,7 +48,7 @@ const Footer = () => {
                 className="link_sns"
               >
                 <img
-                  src="/images/icons/ico-kakaostory.png"
+                  src="./images/icons/ico-kakaostory.png"
                   alt="카카오스토리"
                 />
               </a>
@@ -59,7 +59,7 @@ const Footer = () => {
                 onClick={(e) => e.preventDefault()}
                 className="link_sns"
               >
-                <img src="/images/icons/ico-blog.png" alt="블로그" />
+                <img src="./images/icons/ico-blog.png" alt="블로그" />
               </a>
             </li>
             <li>
@@ -68,7 +68,7 @@ const Footer = () => {
                 onClick={(e) => e.preventDefault()}
                 className="link_sns"
               >
-                <img src="/images/icons/ico-instagram.png" alt="인스타그램" />
+                <img src="./images/icons/ico-instagram.png" alt="인스타그램" />
               </a>
             </li>
             <li>
@@ -77,7 +77,7 @@ const Footer = () => {
                 onClick={(e) => e.preventDefault()}
                 className="link_sns"
               >
-                <img src="/images/icons/ico-facebook.png" alt="페이스북" />
+                <img src="./images/icons/ico-facebook.png" alt="페이스북" />
               </a>
             </li>
           </ul>

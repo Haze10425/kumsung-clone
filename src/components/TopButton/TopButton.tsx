@@ -31,7 +31,7 @@ const TopButton = ({ sectionRef }: TopButtonProps) => {
 
   return (
     <button className="btn_top" ref={btnRef} onClick={handleScrollTop}>
-      <img src="/images/icons/ico-arrow-up.png" alt="최상단 이동" />
+      <img src="./images/icons/ico-arrow-up.png" alt="최상단 이동" />
     </button>
   );
 };
